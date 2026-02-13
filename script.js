@@ -33,34 +33,14 @@ function nextSlide() {
   }
 }
 
-.fade-in {
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.typing {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid white;
-  width: 0;
-  animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  50% { border-color: transparent }
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.style.display = "flex";
+      slide.classList.add("fade-in");
+    } else {
+      slide.style.display = "none";
+      slide.classList.remove("fade-in");
+    }
+  });
 }
