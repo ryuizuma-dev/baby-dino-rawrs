@@ -1,10 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, #6bcf6b, #3aa655);
   height: 100vh;
@@ -13,7 +8,6 @@ body {
   align-items: center;
   color: white;
   text-align: center;
-  overflow: hidden;
 }
 
 .slide {
@@ -21,16 +15,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  width: 90%;
   max-width: 500px;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.slide.active {
-  display: flex;
-  opacity: 1;
+  width: 90%;
+  transition: opacity 0.5s ease;
 }
 
 button {
@@ -42,10 +29,4 @@ button {
   color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #ff1493;
-  transform: scale(1.05);
 }
